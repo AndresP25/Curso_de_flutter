@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() =>  runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,7 +22,22 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Hola Mundo"),
+        ),
+        body: Center(
+          child: Text("Hola Mundo De Nuevo y Solo se puede uno porque no se como hacerlo :("),
+
+        ),
+        /*
+        bottomNavigationBar: ,
+        floatingActionButton: ,
+        floatingActionButtonAnimator: ,
+        floatingActionButtonLocation: ,
+
+         */
+      )//const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
