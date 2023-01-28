@@ -25,7 +25,7 @@ class HeadDescription extends StatelessWidget {
             namePlace,
             style: const TextStyle(
               fontSize: 40.0,
-
+              fontFamily: "Lato",
               fontWeight: FontWeight.w900,
             ),
             textAlign: TextAlign.left,

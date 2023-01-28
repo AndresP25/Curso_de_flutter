@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           title: const Text("TravelPlatziApp")
         ),
 
-        body: DescriptionPlace("Duwili Ella",3.1, descriptionPlace ),
+        body: DescriptionPlace("Duwili Ella",2.8, descriptionPlace ),
 
         )
 
