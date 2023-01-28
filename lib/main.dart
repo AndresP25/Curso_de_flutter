@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'description_place.dart';
+import 'components/description_place/description_place.dart';
 
 void main() =>  runApp( MyApp());
 
