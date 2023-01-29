@@ -93,6 +93,7 @@ flutter:
     - assets/img/Chony.jpg
     - assets/img/Frankie.jpg
     - assets/img/Milu.jpg
+    - assets/img/Pecas.jpg
 
   fonts:
     - family: Lato

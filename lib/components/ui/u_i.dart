@@ -28,16 +28,24 @@ class UI extends StatelessWidget {
     'imgPathToPhoto': "assets/img/Frankie.jpg",
     'nameReviewer': "Frankie",
     'numberReviews': 6,
-    'numberPhotos': 2,
+    'numberPhotos': 1,
     'rateStars': 2.5,
     'reviewDescription': "There is an amazing place in Miami"
   };
-  var listOfPlaceReviews = [placeReview1,placeReview2,placeReview3];
+
+  static const Map placeReview4 ={
+    'imgPathToPhoto': "assets/img/Pecas.jpg",
+    'nameReviewer': "Pecas",
+    'numberReviews': 2,
+    'numberPhotos': 4,
+    'rateStars': 0.5,
+    'reviewDescription': "There is an amazing place in londres"
+  };
+
+  var listOfPlaceReviews = [placeReview1,placeReview2,placeReview3,placeReview4];
 
   String descriptionPlace = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec,pellentesque eu,\n\nPretium quis, sem. Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a.";
-  String imgPathToPhoto = "assets/img/Chony.jpg";
-  String nameReviewer = "Chonny";
-  String reviewDescription = "There is an amazing place in Sri Lanka";
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +59,7 @@ class UI extends StatelessWidget {
             body: ListView(
               children: [
 
-                DescriptionPlace("Duwili Ella",2.8, descriptionPlace ),
+                DescriptionPlace("Duwili Ella",3.5, descriptionPlace ),
 
                 ReviewPlace(listOfPlaceReviews)
               ],
