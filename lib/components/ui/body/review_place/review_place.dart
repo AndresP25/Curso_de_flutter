@@ -1,35 +1,17 @@
 import 'package:flutter/material.dart';
-import 'reviewer_data.dart';
-import 'image_place.dart';
+import 'review_list.dart';
 
 class ReviewPlace extends StatelessWidget{
 
-  String imgPathToPhoto;
-  String nameReviewer;
-  int numberReviews;
-  int numberPhotos;
-  double rateStars;
-  String reviewDescription;
+  List listOfPlaceReviews;
 
   ReviewPlace(
-      this.imgPathToPhoto,
-      this.nameReviewer,
-      this.numberReviews,
-      this.numberPhotos,
-      this.rateStars,
-      this.reviewDescription,
+      this.listOfPlaceReviews,
       {super.key}
   );
 
   @override
   Widget build(BuildContext context) {
-
-    final reviewData = Row (
-      children: [
-        ImagePlace(imgPathToPhoto),
-        ReviewerData(nameReviewer, numberReviews, numberPhotos, rateStars, reviewDescription)
-      ],
-    );
 
     final textPadding = Container(
       margin: const EdgeInsets.only(
@@ -44,13 +26,13 @@ class ReviewPlace extends StatelessWidget{
           fontWeight: FontWeight.w700,
         ),
       ),
-    );
+    );//"All reviews" Text
 
     final reviewModule = Column(
       crossAxisAlignment: CrossAxisAlignment.start, //To Align column to left.
       children: [
         textPadding,
-        reviewData,
+        ReviewList(listOfPlaceReviews),
       ],
     );
 

@@ -91,6 +91,8 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/img/Chony.jpg
+    - assets/img/Frankie.jpg
+    - assets/img/Milu.jpg
 
   fonts:
     - family: Lato
