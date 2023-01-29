@@ -31,10 +31,25 @@ class ReviewPlace extends StatelessWidget{
       ],
     );
 
+    final textPadding = Container(
+      margin: const EdgeInsets.only(
+        top: 20,
+        left: 20
+      ),
+      child: const Text(
+        "All reviews",
+        style: TextStyle(
+          fontSize: 14.0,
+          color: Colors.grey,
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+    );
 
     final reviewModule = Column(
+      crossAxisAlignment: CrossAxisAlignment.start, //To Align column to left.
       children: [
-
+        textPadding,
         reviewData,
       ],
     );
