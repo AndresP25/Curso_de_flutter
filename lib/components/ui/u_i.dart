@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../ui/body/description_place/description_place.dart';
 import '../ui/body/review_place/review_place.dart';
+import '../ui/appbar/gradient_app_bar.dart';
 
 class UI extends StatelessWidget {
 
@@ -52,17 +53,25 @@ class UI extends StatelessWidget {
 
     final ui = Scaffold(
 
+            /*
             appBar: AppBar(
                 title: const Text("TravelPlatziApp")
             ),
+            */
 
-            body: ListView(
+            body: Stack(
               children: [
+                ListView(
+                    children: [
 
-                DescriptionPlace("Duwili Ella",3.5, descriptionPlace ),
+                      DescriptionPlace("Duwili Ella",3.3, descriptionPlace ),
 
-                ReviewPlace(listOfPlaceReviews)
+                      ReviewPlace(listOfPlaceReviews)
+                    ]
+                ),
+                GradientAppBarr(),
               ],
+
             )
 
     );
