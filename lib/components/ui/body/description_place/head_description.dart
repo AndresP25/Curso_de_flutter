@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'stars_rate.dart';
+import '../common_used_classes/row_stars_rate.dart';
 
 class HeadDescription extends StatelessWidget {
 
@@ -33,7 +33,7 @@ class HeadDescription extends StatelessWidget {
 
         ), //PLACE TEXT
 
-        StarsRate(rateStars),    // RATE STAR
+        StarsRate(rateStars,320.0,24.0),    // RATE STAR
 
         Container(
           margin: const EdgeInsets.only(

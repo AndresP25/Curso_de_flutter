@@ -2,46 +2,51 @@ import 'package:flutter/material.dart';
 
 class StarsRate extends StatelessWidget {
 
-  StarsRate(this.rateStars, {super.key});
+  StarsRate(this.rateStars, this.topValue, this.sizeValue, {super.key});
 
   double rateStars;
+  double topValue;
+  double sizeValue;
 
   @override
   Widget build(BuildContext context) {
 
     final voidStar = Container(
-        margin: const EdgeInsets.only(
-          top: 320,
+        margin: EdgeInsets.only(
+          top: topValue,
           right: 3.0,
         ),
 
-        child: const Icon(
+        child: Icon(
           Icons.star_border_outlined,
+          size: sizeValue,
           color: Colors.grey,
         )
 
     );
 
     final halfFilledStar = Container(
-        margin: const EdgeInsets.only(
-          top: 320,
+        margin: EdgeInsets.only(
+          top: topValue,
           right: 3.0,
         ),
 
-        child: const Icon(
+        child: Icon(
           Icons.star_half_outlined,
+          size: sizeValue,
           color: Colors.amber,
         )
     );
 
     final filledStar = Container(
-        margin: const EdgeInsets.only(
-          top: 320.0,
+        margin: EdgeInsets.only(
+          top: topValue,
           right: 3.0,
         ),
 
-        child: const Icon(
+        child: Icon(
           Icons.star,
+          size: sizeValue,
           color: Colors.amber,
         )
 
