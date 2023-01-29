@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../ui/body/description_place/description_place.dart';
 import '../ui/body/review_place/review_place.dart';
-import '../ui/appbar/gradient_app_bar.dart';
+import '../ui/custom_app_bar/custom_app_bar.dart';
 
 class UI extends StatelessWidget {
 
@@ -64,12 +64,12 @@ class UI extends StatelessWidget {
                 ListView(
                     children: [
 
-                      DescriptionPlace("Duwili Ella",3.3, descriptionPlace ),
+                      DescriptionPlace("Duwili Ella",3.5, descriptionPlace ),
 
                       ReviewPlace(listOfPlaceReviews)
                     ]
                 ),
-                GradientAppBarr(),
+                const CustomAppBar(),
               ],
 
             )

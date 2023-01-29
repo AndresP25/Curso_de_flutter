@@ -12,7 +12,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     //Para esconder la barra superior del cel
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+
+    //Para poner de color transparente la barra
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarBrightness: Brightness.light
+        )
+    );
+
 
     return MaterialApp(
       title: 'Flutter Demo',
