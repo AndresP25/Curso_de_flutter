@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/custom_app_bar/card_image_list.dart';
-import 'package:platzi_trips_app/components/ui/custom_app_bar/gradient_app_bar.dart';
+import 'card_image_list.dart';
+import 'gradient_app_bar.dart';
 
 class CustomAppBar extends StatelessWidget {
 
@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
       children: [
 
         GradientAppBarr("Popular"),
-        CardImageList(),
+        const CardImageList(),
       ],
     );
     return appBar;

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FloatingActionButtonFavorite extends StatefulWidget {
+  const FloatingActionButtonFavorite({super.key});
+
   @override
   State<StatefulWidget> createState() {
 
@@ -55,6 +57,7 @@ class _FloatingActionButtonFavorite extends State<FloatingActionButtonFavorite>{
         )
 
     );
+    
   }
 
   @override

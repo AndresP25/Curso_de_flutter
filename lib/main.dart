@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'components/ui/u_i.dart';
+import 'package:platzi_trips_app/components/ui/platzi_trips/platzi_trips.dart';
 import 'package:flutter/services.dart';
+import 'package:platzi_trips_app/components/ui/platzi_trips/platzi_trips_cupertino.dart';
 
-void main() =>  runApp( MyApp());
+void main() =>  runApp( const MyApp());
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -23,12 +24,15 @@ class MyApp extends StatelessWidget {
     );
 
 
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return const MaterialApp(
+      title: 'PlatziTrips',
+      /*
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: UI(),
+      */
+
+      home: PlatziTrips(),
 
       );
   }

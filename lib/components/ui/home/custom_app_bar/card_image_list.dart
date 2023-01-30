@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/custom_app_bar/card_image.dart';
+import 'package:platzi_trips_app/components/ui/home/custom_app_bar/card_image.dart';
 
 class CardImageList extends StatelessWidget {
+  const CardImageList({super.key});
+
   @override
   Widget build(BuildContext context) {
 

@@ -12,8 +12,10 @@ class NavigateButton extends StatelessWidget {
     final navigateButton = InkWell(
 
       onTap: (){
+
         ScaffoldMessenger.of(context).showSnackBar(
              SnackBar(
+
                 content: const Text(
                     'Good Luck',
                     style: TextStyle(
