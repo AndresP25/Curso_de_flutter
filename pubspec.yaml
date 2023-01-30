@@ -100,6 +100,7 @@ flutter:
     - assets/img/mountain_stars.jpg
     - assets/img/river.jpg
     - assets/img/sunset.jpg
+    - assets/img/frost_mountain.jpg
 
   fonts:
     - family: Lato

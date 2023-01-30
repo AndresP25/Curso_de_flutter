@@ -43,6 +43,16 @@ class UiHome extends StatelessWidget {
     'reviewDescription': "There is an amazing place in londres"
   };
 
+  static const List listOfPathImagesAppBarr = [
+    "assets/img/river.jpg",
+    "assets/img/mountain.jpg",
+    "assets/img/beach_palm.jpg",
+    "assets/img/beach.jpg",
+    "assets/img/mountain_stars.jpg",
+    "assets/img/sunset.jpg",
+    "assets/img/frost_mountain.jpg"
+  ];
+
   var listOfPlaceReviews = [placeReview1,placeReview2,placeReview3,placeReview4];
 
   String descriptionPlace = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec,pellentesque eu,\n\nPretium quis, sem. Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut, imperdiet a.";
@@ -62,7 +72,7 @@ class UiHome extends StatelessWidget {
                       ReviewPlace(listOfPlaceReviews)
                     ]
                 ),
-                const CustomAppBar(),
+                CustomAppBar(listOfPathImagesAppBarr),
               ],
 
 
