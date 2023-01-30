@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/components/ui/body/description_place/navigate_button.dart';
 import 'head_description.dart';
 
 class DescriptionPlace extends StatelessWidget {
@@ -29,9 +30,12 @@ class DescriptionPlace extends StatelessWidget {
       );  //DESCRIPTION TEXT
 
       final descriptionModule = Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
           children: [
               HeadDescription(namePlace,rateStars),
+
               description,
+              NavigateButton("Navigate"),
           ],
       );
 
