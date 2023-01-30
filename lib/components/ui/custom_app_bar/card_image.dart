@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/components/ui/custom_app_bar/floating_action_button_favorite.dart';
 
 class CardImage extends StatelessWidget{
 
@@ -36,7 +37,16 @@ class CardImage extends StatelessWidget{
       ),
     );
 
-    return cardImage;
+    final cardImageWithFavoriteButton = Stack(
+      alignment: const Alignment(-0.03,1.1),
+      children: [
+        cardImage,
+
+        FloatingActionButtonFavorite()
+      ],
+    );
+
+    return cardImageWithFavoriteButton;
   }
 
 

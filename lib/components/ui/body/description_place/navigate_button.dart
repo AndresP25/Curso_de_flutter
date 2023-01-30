@@ -27,25 +27,25 @@ class NavigateButton extends StatelessWidget {
 
                 duration: const Duration(milliseconds: 2000),
 
-
                 width: 100.0, // Width of the SnackBar.
                 padding: const EdgeInsets.all( 8 ),
 
                 behavior: SnackBarBehavior.floating,
 
-
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
             )
         );
       },
       child: Container(
+
         margin: const EdgeInsets.only(
           top: 30,
           left: 20,
           bottom: 10
         ),
+
         height: 50,
         width: 180,
 
