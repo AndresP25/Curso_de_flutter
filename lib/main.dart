@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/platzi_trips/platzi_trips.dart';
 import 'package:flutter/services.dart';
-import 'package:platzi_trips_app/components/ui/platzi_trips/platzi_trips_cupertino.dart';
+import 'package:platzi_trips_app/components/ui/ui_platzi_trips/platzi_trips_cupertino.dart';
+import 'package:platzi_trips_app/components/ui/ui_platzi_trips/platzi_trips.dart';
 
 void main() =>  runApp( const MyApp());
 

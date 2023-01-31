@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/components/ui/home/u_i_home.dart';
+import 'package:platzi_trips_app/components/ui/profile/u_i_profile.dart';
 
 class PlatziTrips extends StatefulWidget{
   const PlatziTrips({super.key});
@@ -17,6 +18,7 @@ class _PlatziTrips extends State<PlatziTrips>{
 
   final List<Widget> widgetChildren =[
     UiHome(),
+    UiProfile(),
   ];
 
   void onTapTapped(int index){
@@ -47,18 +49,21 @@ class _PlatziTrips extends State<PlatziTrips>{
           selectedItemColor: Colors.deepPurple,
           unselectedItemColor: Colors.grey,
 
-
-          currentIndex: indexTap,
           onTap: onTapTapped,
+          currentIndex: indexTap,
+
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: ""
             ),
+            /*
             BottomNavigationBarItem(
                 icon: Icon(Icons.search),
                 label: ""
             ),
+
+             */
             BottomNavigationBarItem(
                 icon: Icon(Icons.person),
                 label: ""

@@ -19,11 +19,11 @@ class GradientAppBarr extends StatelessWidget{
           gradient: LinearGradient (
             colors: [ //Va del tono mas clarito al mas oscuro
               Colors.blueAccent,
-              Colors.green,
+              Colors.greenAccent,
             ],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1, 1),
-            stops: [0.4,0.9],
+            //stops: [0.4,0.9],
           )
         ),
 
