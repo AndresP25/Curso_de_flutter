@@ -54,7 +54,8 @@ class _PlatziTrips extends State<PlatziTrips>{
 
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Icon(Icons.home,size: 30.0),
+
                 label: ""
             ),
             /*
@@ -65,7 +66,7 @@ class _PlatziTrips extends State<PlatziTrips>{
 
              */
             BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.person,size: 30.0),
                 label: ""
             ),
           ],

@@ -38,7 +38,7 @@ class CardImage extends StatelessWidget{
     );
 
     final cardImageWithFavoriteButton = Stack(
-      alignment: const Alignment(-0.03,1.1),
+      alignment: const Alignment(-0.03,1.15),
       children: [
         cardImage,
         const FloatingActionButtonFavorite()

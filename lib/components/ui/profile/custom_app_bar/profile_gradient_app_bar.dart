@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class GradientAppBar extends StatelessWidget{
+class ProfileGradientAppBar extends StatelessWidget{
 
-  const GradientAppBar(
+  const ProfileGradientAppBar(
       {super.key}
       );
 

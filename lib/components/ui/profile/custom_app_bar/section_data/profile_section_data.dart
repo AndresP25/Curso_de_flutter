@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/profile_data.dart';
+import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/section_data/profile_data.dart';
 
 class ProfileSectionData extends StatelessWidget{
 
@@ -21,7 +21,7 @@ class ProfileSectionData extends StatelessWidget{
           width: 100,
 
           margin: const EdgeInsets.only(
-              top: 20,
+              top: 10,
               left: 20
           ),
 

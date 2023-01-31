@@ -101,6 +101,9 @@ flutter:
     - assets/img/river.jpg
     - assets/img/sunset.jpg
     - assets/img/frost_mountain.jpg
+    - assets/img/tulipanes.jpg
+    - assets/img/paris.jpg
+    - assets/img/monte_fuji.jpg
 
   fonts:
     - family: Lato
