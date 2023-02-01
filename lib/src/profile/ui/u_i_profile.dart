@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/profile/body/profile_body.dart';
-import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/profile_custom_app_bar.dart';
-import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/profile_gradient_app_bar.dart';
+import 'package:platzi_trips_app/src/profile/ui/body/profile_body.dart';
+import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/profile_custom_app_bar.dart';
+import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/profile_gradient_app_bar.dart';
 
 class UiProfile extends StatelessWidget{
 

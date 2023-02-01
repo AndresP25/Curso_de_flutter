@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/common_used_clases/floating_action_button_favorite.dart';
+import 'package:platzi_trips_app/src/common_used_widgets/floating_action_button_favorite.dart';
 
 class CardImage extends StatelessWidget{
 

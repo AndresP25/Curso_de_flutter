@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/home/body/description_place/navigate_button.dart';
+import 'package:platzi_trips_app/src/home/ui/body/description_place/navigate_button.dart';
 import 'head_description.dart';
 
 class DescriptionPlace extends StatelessWidget {

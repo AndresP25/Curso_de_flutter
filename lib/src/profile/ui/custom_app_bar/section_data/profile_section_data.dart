@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/section_data/profile_data.dart';
+import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/section_data/profile_data.dart';
 
 class ProfileSectionData extends StatelessWidget{
 

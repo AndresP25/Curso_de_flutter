@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/profile/body/profile_text_description/profile_description_text_description.dart';
-import 'package:platzi_trips_app/components/ui/profile/body/profile_text_description/profile_name_text_description.dart';
-import 'package:platzi_trips_app/components/ui/profile/body/profile_text_description/profile_steps_text_description.dart';
+import 'package:platzi_trips_app/src/profile/ui/body/profile_text_description/profile_description_text_description.dart';
+import 'package:platzi_trips_app/src/profile/ui/body/profile_text_description/profile_name_text_description.dart';
+import 'package:platzi_trips_app/src/profile/ui/body/profile_text_description/profile_steps_text_description.dart';
 
 class ProfileImageDescription extends StatelessWidget{
 

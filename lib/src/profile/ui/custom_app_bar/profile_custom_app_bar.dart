@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/action_buttons/row_action_buttons.dart';
-import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/section_data/profile_section_data.dart';
-import 'package:platzi_trips_app/components/ui/profile/custom_app_bar/profile_gradient_app_bar.dart';
+import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/action_buttons/row_action_buttons.dart';
+import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/section_data/profile_section_data.dart';
+import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/profile_gradient_app_bar.dart';
 
 class ProfileCustomAppBar extends StatelessWidget {
 
@@ -9,7 +9,6 @@ class ProfileCustomAppBar extends StatelessWidget {
   String email;
   String pathOfProfileImage;
   String appBarrText = "Profile";
-
   ProfileCustomAppBar(this.pathOfProfileImage, this.userName,this.email, {super.key} );
 
   @override

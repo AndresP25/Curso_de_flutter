@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../home/body/description_place/description_place.dart';
-import '../home/body/review_place/review_place.dart';
-import '../home/custom_app_bar/custom_app_bar.dart';
+import 'package:platzi_trips_app/src/home/ui/body/description_place/description_place.dart';
+import 'package:platzi_trips_app/src/home/ui/body/review_place/review_place.dart';
+import 'package:platzi_trips_app/src/home/ui/custom_app_bar/custom_app_bar.dart';
 
 class UiHome extends StatelessWidget {
 
