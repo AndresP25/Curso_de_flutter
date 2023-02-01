@@ -1,3 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
@@ -5,7 +8,15 @@ import 'package:platzi_trips_app/src/profile/bloc/profile_bloc.dart';
 import 'package:platzi_trips_app/src/ui_platzi_trips/platzi_trips_cupertino.dart';
 import 'package:platzi_trips_app/src/ui_platzi_trips/platzi_trips.dart';
 
-void main() =>  runApp( const MyApp());
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp( const MyApp());
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,6 +35,7 @@ class MyApp extends StatelessWidget {
             statusBarBrightness: Brightness.light
         )
     );
+
 
 
     return  BlocProvider(
