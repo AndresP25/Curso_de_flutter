@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/src/profile/ui/body/profile_image_stack.dart';
+import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/body/profile_image_stack.dart';
 
 class ProfileImageList extends StatelessWidget{
 

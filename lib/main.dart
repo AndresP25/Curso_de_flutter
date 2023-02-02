@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:platzi_trips_app/src/profile/ui/screens/u_i_sign_in.dart';
 import 'firebase_options.dart';
 
 import 'package:flutter/material.dart';
@@ -10,10 +11,12 @@ import 'package:platzi_trips_app/src/ui_platzi_trips/platzi_trips.dart';
 
 void main() async{
 
+  //Conecta con firebase... no cambiar
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   runApp( const MyApp());
 }
 
@@ -42,10 +45,10 @@ class MyApp extends StatelessWidget {
 
       bloc: ProfileBloc(),
 
-        child: const MaterialApp(
+        child:  MaterialApp(
           title: 'PlatziTrips',
 
-          home: PlatziTrips(),
+          home: UiSingIn(),//PlatziTrips(),
 
         )
 

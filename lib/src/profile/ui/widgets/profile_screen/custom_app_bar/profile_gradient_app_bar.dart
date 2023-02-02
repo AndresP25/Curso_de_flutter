@@ -21,7 +21,7 @@ class ProfileGradientAppBar extends StatelessWidget{
             begin: FractionalOffset(0,0),
             end: FractionalOffset(1,1),
             //stops: [0.4,0.9],
-          )
+         )
       ),
 
     );

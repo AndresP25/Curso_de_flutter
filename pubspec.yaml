@@ -110,6 +110,7 @@ flutter:
     - assets/img/tulipanes.jpg
     - assets/img/paris.jpg
     - assets/img/monte_fuji.jpg
+    - assets/img/gmail.png
 
   fonts:
     - family: Lato

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/action_buttons/row_action_buttons.dart';
-import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/section_data/profile_section_data.dart';
-import 'package:platzi_trips_app/src/profile/ui/custom_app_bar/profile_gradient_app_bar.dart';
+import 'package:platzi_trips_app/src/common_used_widgets/container_background.dart';
+import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/custom_app_bar/action_buttons/row_action_buttons.dart';
+import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/custom_app_bar/section_data/profile_section_data.dart';
 
 class ProfileCustomAppBar extends StatelessWidget {
 
@@ -51,12 +51,12 @@ class ProfileCustomAppBar extends StatelessWidget {
 
       children:   [
 
-        const ClipRect( //Para recortar el gradiente hasta la parte del appbar
+         ClipRect( //Para recortar el gradiente hasta la parte del appbar
           child: Align(
             alignment: Alignment.topCenter,
             heightFactor: 0.72,
 
-            child: ProfileGradientAppBar(),
+            child: ContainerBackground(400),
           ),
         ),
 

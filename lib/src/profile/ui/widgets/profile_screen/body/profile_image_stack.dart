@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/src/common_used_widgets/floating_action_button_favorite.dart';
-import 'package:platzi_trips_app/src/profile/ui/body/profile_card_image.dart';
-import 'package:platzi_trips_app/src/profile/ui/body/profile_image_description.dart';
+import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/body/profile_card_image.dart';
+import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/body/profile_image_description.dart';
 
 class ProfileImageStack extends StatelessWidget{
 
