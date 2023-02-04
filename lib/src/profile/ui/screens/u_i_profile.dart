@@ -5,7 +5,7 @@ import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/custom_ap
 
 class UiProfile extends StatelessWidget{
 
-  static const pathOfProfileImage = "assets/img/Chony.jpg";
+  static const pathOfProfileImage = ;//"assets/img/Chony.jpg";
   static const userName = "Chonny";
   static const email = "Chonny@gmail.com";
 
@@ -39,6 +39,7 @@ class UiProfile extends StatelessWidget{
         children: [
 
           const ProfileGradientAppBar(),
+
           ProfileBody(listOfProfileImage),
 
           ProfileCustomAppBar(pathOfProfileImage, userName, email),

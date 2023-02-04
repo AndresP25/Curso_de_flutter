@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:platzi_trips_app/src/profile/ui/screens/u_i_sign_in.dart';
 import 'firebase_options.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
@@ -19,7 +18,6 @@ void main() async{
 
   runApp( const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -39,19 +37,15 @@ class MyApp extends StatelessWidget {
         )
     );
 
-
-
     return  BlocProvider(
 
-      bloc: ProfileBloc(),
+        bloc: ProfileBloc(),
 
         child:  MaterialApp(
           title: 'PlatziTrips',
 
           home: UiSingIn(),//PlatziTrips(),
-
-        )
-
+        ),
     );
   }
 }

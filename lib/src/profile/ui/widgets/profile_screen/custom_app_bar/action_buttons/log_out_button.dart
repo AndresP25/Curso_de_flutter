@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:platzi_trips_app/src/profile/bloc/profile_bloc.dart';
 
 class LogOutButton extends StatefulWidget{
+
   const LogOutButton({super.key});
 
   @override
@@ -13,13 +16,15 @@ class LogOutButton extends StatefulWidget{
 
 class _LogOutButton extends State<LogOutButton> {
 
+  ProfileBloc? profileBloc;
+
   void onPressedLogOutButton(){
 
     ScaffoldMessenger.of(context).showSnackBar(
 
         SnackBar(
           content: const Text(
-            "SOON... Log Out",
+            "Time has come",
             style: TextStyle(
               fontSize:15.0,
               color: Colors.white,
@@ -41,10 +46,15 @@ class _LogOutButton extends State<LogOutButton> {
         )
 
     );
+
+    profileBloc?.signOut();
+
   }
 
   @override
   Widget build(BuildContext context) {
+
+    profileBloc = BlocProvider.of(context);
 
     final logOutButton = FloatingActionButton(
         backgroundColor: Colors.white,
@@ -57,6 +67,7 @@ class _LogOutButton extends State<LogOutButton> {
             color: Colors.deepPurple,
         )
     );
+
     return logOutButton;
   }
 
