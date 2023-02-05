@@ -78,6 +78,7 @@ class _UiSingIn extends State<UiSingIn> {
 
               PrettyInkWellButton(
                   onPressed: () {
+                    profileBloc?.signOut();
                     profileBloc?.signIn().then((UserCredential? user) => print("El usuario es ${user?.user}"));
                     },
 

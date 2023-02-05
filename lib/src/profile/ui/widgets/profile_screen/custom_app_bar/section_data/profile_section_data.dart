@@ -65,7 +65,7 @@ class ProfileSectionData extends StatelessWidget{
       print("Logeado");
       print(snapshot.data);
 
-      user = User(
+      user = User(uId: "1",
         userName: snapshot.data.displayName,
         email: snapshot.data.email,
         userPhotoUrl: snapshot.data.photoURL,
