@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/src/profile/resources/model/user.dart';
 import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/body/profile_body.dart';
 import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/custom_app_bar/profile_custom_app_bar.dart';
 import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/custom_app_bar/profile_gradient_app_bar.dart';
 
 class UiProfile extends StatelessWidget{
-
-  static const pathOfProfileImage = ;//"assets/img/Chony.jpg";
-  static const userName = "Chonny";
-  static const email = "Chonny@gmail.com";
 
   static const Map profileImage1 ={
     'pathImage': "assets/img/tulipanes.jpg",
@@ -32,6 +29,8 @@ class UiProfile extends StatelessWidget{
 
   var listOfProfileImage = [profileImage1,profileImage2,profileImage3];
 
+  UiProfile({super.key});
+
   @override
   Widget build(BuildContext context) {
 
@@ -42,7 +41,7 @@ class UiProfile extends StatelessWidget{
 
           ProfileBody(listOfProfileImage),
 
-          ProfileCustomAppBar(pathOfProfileImage, userName, email),
+          ProfileCustomAppBar(),
 
         ]
     );

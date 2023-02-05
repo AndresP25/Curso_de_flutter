@@ -23,7 +23,7 @@ class CardImageList extends StatelessWidget {
       return cardImageList;
     }
 
-    final cardImageList = Container(
+    final cardImageList = SizedBox(
       height: 350,
 
       child: ListView(

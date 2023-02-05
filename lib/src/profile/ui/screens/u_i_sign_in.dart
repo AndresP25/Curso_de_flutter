@@ -7,6 +7,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:platzi_trips_app/src/ui_platzi_trips/platzi_trips.dart';
 
 class UiSingIn extends StatefulWidget {
+  const UiSingIn({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _UiSingIn();
@@ -29,7 +31,7 @@ class _UiSingIn extends State<UiSingIn> {
 
   Widget _handleCurrentSession(){
 
-    return StreamBuilder(
+    return StreamBuilder( // el streamBuilder
         stream: profileBloc?.authStatus, //Solicitamos conocer el estatus de la sesion de Firebase
 
         builder: (BuildContext context, AsyncSnapshot snapshot){

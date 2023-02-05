@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class ProfileData extends StatelessWidget{
@@ -13,38 +14,48 @@ class ProfileData extends StatelessWidget{
     final profileData = Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-              margin: const EdgeInsets.only(
-                  top: 15,
-                  left: 20
-              ),
-              //alignment: const Alignment(0,0),
-              child: Text(
-                userName,
 
-                style: const TextStyle(
-                  fontSize: 25.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
+
+            Container(
+
+                margin: const EdgeInsets.only(
+                    top: 15,
+                    left: 20,
+                    right:20
                 ),
-              )
 
-          ),
+                child: Center(
+                  child:Text(
+                  userName,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900,
+                  ),
+                )
+                ),
+
+            ),
+
 
           Container(
               margin: const EdgeInsets.only(
                   top:5,
-                  left: 20
+                  left: 20,
+                  right: 20
               ),
               //alignment: const Alignment(0,0),
-              child: Text(
-                email,
+              child: Center(
 
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.white54,
-
-                                  ),
+                child:Text(
+                  email,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.white54,
+                  ),
+                )
               )
 
           ),

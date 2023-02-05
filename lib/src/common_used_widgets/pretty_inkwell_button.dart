@@ -4,16 +4,20 @@ class PrettyInkWellButton extends StatefulWidget{
 
   final String textOfFilledButton;
   final VoidCallback onPressed;
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
 
 
-  const PrettyInkWellButton({super.key,
-    required this.onPressed,
-    required this.textOfFilledButton,
-    required this.height,
-    required this.width
-  });
+  const PrettyInkWellButton(
+
+      {
+        super.key,
+        required this.onPressed,
+        required this.textOfFilledButton,
+        this.height,
+        this.width,
+      }
+  );
 
   @override
   State<StatefulWidget> createState() {

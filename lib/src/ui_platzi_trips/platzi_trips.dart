@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/src/home/ui//u_i_home.dart';
+import 'package:platzi_trips_app/src/profile/bloc/profile_bloc.dart';
 import 'package:platzi_trips_app/src/profile/ui/screens/u_i_profile.dart';
 
 class PlatziTrips extends StatefulWidget{
@@ -15,10 +17,12 @@ class PlatziTrips extends StatefulWidget{
 class _PlatziTrips extends State<PlatziTrips>{
 
   int indexTap = 0;
+  ProfileBloc? profileBloc;
 
   final List<Widget> widgetChildren =[
     UiHome(),
-    UiProfile(),
+    //para acceder a los datos
+    BlocProvider<ProfileBloc>(bloc: ProfileBloc(), child:UiProfile()),
   ];
 
   void onTapTapped(int index){

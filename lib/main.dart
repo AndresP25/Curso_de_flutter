@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/src/profile/bloc/profile_bloc.dart';
-import 'package:platzi_trips_app/src/ui_platzi_trips/platzi_trips_cupertino.dart';
-import 'package:platzi_trips_app/src/ui_platzi_trips/platzi_trips.dart';
 
 void main() async{
 
