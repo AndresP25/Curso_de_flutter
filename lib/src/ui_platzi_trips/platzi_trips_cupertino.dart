@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:platzi_trips_app/src/home/ui/u_i_home.dart';
+import 'package:platzi_trips_app/src/home/ui/screens/u_i_home.dart';
 
 class PlatziTripsCupertino extends StatelessWidget {
   const PlatziTripsCupertino({super.key});

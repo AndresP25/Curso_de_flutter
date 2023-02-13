@@ -4,18 +4,30 @@ class PrettyInkWellButton extends StatefulWidget{
 
   final String textOfFilledButton;
   final VoidCallback onPressed;
-  final double? height;
-  final double? width;
+  final bool buttonWithIcon;
+  bool? iconBool;
+  IconData? icon;
+  String? imagePath;
+  final double height;
+  final double width;
+  final bool snackbar;
+  String? snackbarTextPressed;
 
-
-  const PrettyInkWellButton(
+   PrettyInkWellButton(
 
       {
         super.key,
         required this.onPressed,
         required this.textOfFilledButton,
-        this.height,
-        this.width,
+        required this.height,
+        required this.width,
+        required this.buttonWithIcon,
+        required this.snackbar,
+        this.snackbarTextPressed,
+        this.iconBool,
+        this.icon,
+        this.imagePath,
+
       }
   );
 
@@ -31,8 +43,42 @@ class _PrettyInkWellButton extends State<PrettyInkWellButton>{
   @override
   Widget build(BuildContext context) {
 
+    void onPressedButton(){
+
+      if (widget.snackbar == true){
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                widget.snackbarTextPressed!,
+                style: const TextStyle(
+                  fontSize:15.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+              duration: const Duration(milliseconds: 2000),
+
+              width: 300.0, // Width of the SnackBar.
+              padding: const EdgeInsets.all( 8 ),
+
+              behavior: SnackBarBehavior.floating,
+
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+            )
+        );
+      }
+
+      widget.onPressed();
+
+
+    }
+
     final prettyInkWellButton = InkWell(
-        onTap: widget.onPressed,
+        onTap: onPressedButton,
 
         child: Container(
 
@@ -62,38 +108,52 @@ class _PrettyInkWellButton extends State<PrettyInkWellButton>{
 
           child: Center(
 
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 25,
-                  width: 25,
+            child: widget.buttonWithIcon ?
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 25,
+                    width: 25,
 
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
 
+
+                    ),
+                    child: widget.iconBool! ?
+                        Icon(
+                            widget.icon,
+                            color: Colors.deepPurple,
+                        )
+                        :
+                        CircleAvatar(
+                          backgroundColor: const Color.fromARGB(0, 255, 255, 255),//sin color
+                          backgroundImage: NetworkImage(widget.imagePath!),
+                        ),
                   ),
-                  child: const CircleAvatar(
-                    //
-                    backgroundImage: AssetImage(
-                        "assets/img/gmail.png"
+
+                  const SizedBox (width: 15),
+
+                  Text(
+                    widget.textOfFilledButton,
+                    style: const TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
                     ),
                   ),
+                ],
+              )
+              :
+              Text(
+                widget.textOfFilledButton,
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w800,
                 ),
-
-                const SizedBox (width: 15),
-
-                Text(
-                  widget.textOfFilledButton,
-                  style: const TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ],
-            )
+              )
           ),
         ),
 

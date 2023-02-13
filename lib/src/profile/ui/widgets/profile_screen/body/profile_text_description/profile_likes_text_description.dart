@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ProfileStepsOfTextDescription extends StatelessWidget {
+class ProfileLikesOfTextDescription extends StatelessWidget {
 
-  int steps;
-  ProfileStepsOfTextDescription(this.steps, {super.key});
+  int likes;
+  ProfileLikesOfTextDescription(this.likes, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ProfileStepsOfTextDescription extends StatelessWidget {
           bottom: 20,
       ),
       child: Text(
-        "Steps: $steps",
+        "Hearts: $likes",
         style: const TextStyle(
           fontSize: 13.0,
           color: Colors.deepOrange,

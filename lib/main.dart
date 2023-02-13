@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
 
         bloc: ProfileBloc(),
 
-        child:  MaterialApp(
+        child:  const MaterialApp(
           title: 'PlatziTrips',
 
           home: UiSingIn(),//PlatziTrips(),

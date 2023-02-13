@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/src/common_used_widgets/container_background.dart';
+import 'package:platzi_trips_app/src/common_used_widgets/gradient_generic.dart';
 import 'package:platzi_trips_app/src/common_used_widgets/pretty_inkwell_button.dart';
 import 'package:platzi_trips_app/src/profile/bloc/profile_bloc.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:platzi_trips_app/src/profile/resources/model/user.dart' as user_Profix;
 import 'package:platzi_trips_app/src/ui_platzi_trips/platzi_trips.dart';
 
 class UiSingIn extends StatefulWidget {
@@ -21,10 +22,13 @@ class _UiSingIn extends State<UiSingIn> {
   //para llamar el bloc se debe traer  libreria bloc provider
   //y llamar el bloc desde
   ProfileBloc? profileBloc;
-  
+
+  late double screenWidth ;
   @override
   Widget build(BuildContext context) {
     profileBloc = BlocProvider.of(context); //asi se instancia el bloc
+
+    screenWidth = MediaQuery.of(context).size.width;
 
     return _handleCurrentSession();
   }
@@ -55,21 +59,28 @@ class _UiSingIn extends State<UiSingIn> {
 
         children: [
 
-          ContainerBackground(double.infinity),
+          GradientGeneric(),
+          //ContainerBackground(double.infinity),
 
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
 
-              const SizedBox(
-                width: 250,
-                child: Text(
-                  "Welcome to your Trips App",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.w900,
+               Flexible(
+                child: Container(
+                  margin: const EdgeInsets.only(
+                      left: 60,
+                      right: 60
+                  ),
+                  width: screenWidth,
+                  child: const Text(
+                    "Welcome to your Trips App",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
                 ),
               ),
@@ -79,25 +90,29 @@ class _UiSingIn extends State<UiSingIn> {
               PrettyInkWellButton(
                   onPressed: () {
                     profileBloc?.signOut();
-                    profileBloc?.signIn().then((UserCredential? user) => print("El usuario es ${user?.user}"));
-                    },
+                    profileBloc?.signIn().then((UserCredential? userC) {
+                      profileBloc?.updateUserData(user_Profix.User(
+                      uId: userC?.user?.uid,
+                      userName: userC?.user?.displayName,
+                      email: userC?.user?.email,
+                      userPhotoUrl: userC?.user?.photoURL,
+                      userFavoritePlaces: null,
+                      userCreatedPlaces: null,
+                    ));
+
+                    });
+                  },
 
                   textOfFilledButton: 'Log In with Google',
+                  buttonWithIcon: true,
+                  iconBool: false,
+                  imagePath: "https://i.ibb.co/Cz11n7x/gmail.png",
                   height: 50,
-                  width: 250)
-              /*
-              const FilledButton(
-                  onPressed: null,
-                  child: Text(
-                      'Sign In with Google',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w900,
-                        ),
-                  )
-              ),
+                  width: 250,
+                  snackbar: true,
+                  snackbarTextPressed: "Welcome to your Trips App",
+              )
 
-               */
             ],
           ),
         ],

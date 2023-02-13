@@ -67,6 +67,7 @@ class _SavedFavoritePlacesButton extends State<SavedFavoritePlacesButton> {
         tooltip: "Saved favorite places",
         mini:true,
         onPressed: onPressedSavedFavoritePlacesButton,
+        heroTag: null,
         child:  Icon(
             _pressed ? Icons.bookmark: Icons.bookmark_border,
           color: Colors.deepPurple,

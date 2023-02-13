@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/src/home/ui/body/description_place/navigate_button.dart';
+import 'package:platzi_trips_app/src/common_used_widgets/pretty_inkwell_button.dart';
 import 'head_description.dart';
 
 class DescriptionPlace extends StatelessWidget {
@@ -35,7 +35,24 @@ class DescriptionPlace extends StatelessWidget {
               HeadDescription(namePlace,rateStars),
 
               description,
-              NavigateButton("Navigate"),
+
+              Container(
+                margin: const EdgeInsets.only(
+                  top: 20.0,
+                  left: 20.0,
+                  //right: 20.0,
+                ),
+                child: PrettyInkWellButton(
+                    onPressed: (){},
+                    textOfFilledButton: "Navigate",
+                    height: 50,
+                    width: 150,
+                    buttonWithIcon: false,
+                    snackbar: true,
+                  snackbarTextPressed: "Good luck!",
+                ),
+              )
+              //NavigateButton("Navigate"),
           ],
       );
 

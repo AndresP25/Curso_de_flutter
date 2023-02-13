@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class ProfileUserPhoto extends StatelessWidget {
 
-  final String pathOfProfileImage;
+  final String? pathOfProfileImage;
 
   final bool assetImage;
+
   const ProfileUserPhoto({super.key,
     required this.pathOfProfileImage,
     this.assetImage = false});
@@ -35,9 +36,9 @@ class ProfileUserPhoto extends StatelessWidget {
 
   Widget circleAvatar(){
     if (assetImage == true){
-      return CircleAvatar(backgroundImage:AssetImage(pathOfProfileImage));
+      return CircleAvatar(backgroundImage:AssetImage(pathOfProfileImage!));
     }else{
-      return CircleAvatar(backgroundImage:NetworkImage(pathOfProfileImage));
+      return CircleAvatar(backgroundImage:NetworkImage(pathOfProfileImage!));
     }
   }
 }

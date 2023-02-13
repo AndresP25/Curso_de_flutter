@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/src/common_used_widgets/action_button_generic.dart';
+import 'package:platzi_trips_app/src/common_used_widgets/title_appbar_generic.dart';
 
 class ProfileTitleSection extends StatelessWidget{
 
@@ -13,22 +14,10 @@ class ProfileTitleSection extends StatelessWidget{
     return Row(
 
       children: [
-
-        Container(
-          margin: const EdgeInsets.only(
-              top:41,
-              left: 21.5
-          ),
-          //alignment: const Alignment(0,0),
-          child: Text(
-            appBarrText,
-
-            style: const TextStyle(
-              fontSize: 40.0,
-              color: Colors.white,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
+        TitleAppBarGeneric(
+            appBarText: appBarrText,
+            top:41,
+            left:21.5
         ),
 
         const Spacer(flex:2),
@@ -40,6 +29,7 @@ class ProfileTitleSection extends StatelessWidget{
           ),
           child: ActionButtonGeneric(
             onPressed: (){},
+            heroTag: "Settings",
             icon: Icons.settings,
             mini: true,
             tooltip: 'settings',

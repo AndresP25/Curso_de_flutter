@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/src/common_used_widgets/card_image_generic.dart';
 import 'package:platzi_trips_app/src/common_used_widgets/floating_action_button_favorite.dart';
 import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/body/profile_card_image.dart';
 import 'package:platzi_trips_app/src/profile/ui/widgets/profile_screen/body/profile_image_description.dart';
 
 class ProfileImageStack extends StatelessWidget{
 
-  String pathImage;
-  String nameDescription;
+  String urlPlaceImage;
+  String namePlace;
   String description;
-  int steps;
+  int likes;
 
-  ProfileImageStack(this.pathImage, this.nameDescription, this.description, this.steps,{super.key});
+  ProfileImageStack( {
+    required this.namePlace,
+    required this.description,
+    required this.urlPlaceImage,
+    required this.likes,
+    super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +25,7 @@ class ProfileImageStack extends StatelessWidget{
       alignment: const Alignment(0.95,0.8),
       children: [
 
-        ProfileImageDescription(nameDescription, description, steps),
+        ProfileImageDescription(namePlace, description, likes),
         const FloatingActionButtonFavorite()
       ],
     );
@@ -27,7 +33,14 @@ class ProfileImageStack extends StatelessWidget{
     final profileImageStack = Stack(
       alignment: const Alignment(0,0.75),
       children: [
-        ProfileCardImage(pathImage),
+        //ProfileCardImage(urlPlaceImage),
+        CardImageGeneric(
+            asset: false,
+            pathImage: urlPlaceImage,
+            height: 250,
+            width: 380,
+            bottom: 80,
+        ),
         auxStack
       ],
     );

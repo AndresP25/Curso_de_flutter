@@ -68,6 +68,7 @@ class _FloatingActionButtonFavorite extends State<FloatingActionButtonFavorite>{
         mini: true,
         tooltip: "Favorite",//si se posiciona encima
         onPressed: onPressedFavoriteButton, //a pesar de que es un metodo no lleva parentesis
+        heroTag: null,
         child:  Icon(
             _pressed ? Icons.favorite: Icons.favorite_border
         )

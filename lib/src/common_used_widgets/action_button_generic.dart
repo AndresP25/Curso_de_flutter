@@ -7,6 +7,7 @@ class ActionButtonGeneric extends StatefulWidget{
   ActionButtonGeneric(
       {super.key,
         required this.onPressed,
+        required this.heroTag,
         required this.icon,
         required this.mini,
         required this.tooltip,
@@ -15,6 +16,7 @@ class ActionButtonGeneric extends StatefulWidget{
       });
 
   final VoidCallback onPressed;
+  final String heroTag;
   final IconData  icon;
   final bool mini;
   final String tooltip;
@@ -32,7 +34,7 @@ class ActionButtonGeneric extends StatefulWidget{
 
 class _ActionButtonGeneric extends State<ActionButtonGeneric> {
 
-  void onPressedLogOutButton(){
+  void onPressedButton(){
 
     if (widget.snackbar == true){
       ScaffoldMessenger.of(context).showSnackBar(
@@ -72,8 +74,9 @@ class _ActionButtonGeneric extends State<ActionButtonGeneric> {
     final actionButtonGeneric = FloatingActionButton(
         backgroundColor: Colors.white,
         tooltip: widget.tooltip,
+        heroTag: widget.heroTag,
         mini: widget.mini,
-        onPressed: onPressedLogOutButton,
+        onPressed: onPressedButton,
 
         child:  Icon(
            widget.icon,

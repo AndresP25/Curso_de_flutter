@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/src/home/ui/body/description_place/description_place.dart';
-import 'package:platzi_trips_app/src/home/ui/body/review_place/review_place.dart';
-import 'package:platzi_trips_app/src/home/ui/custom_app_bar/custom_app_bar.dart';
+import 'package:platzi_trips_app/src/home/ui/widgets/home_screen/body/description_place/description_place.dart';
+import 'package:platzi_trips_app/src/home/ui/widgets/home_screen/body/review_place/review_place.dart';
+import 'package:platzi_trips_app/src/home/ui/widgets/home_screen/custom_app_bar/home_custom_app_bar.dart';
 
 class UiHome extends StatelessWidget {
 
@@ -44,13 +44,20 @@ class UiHome extends StatelessWidget {
   };
 
   static const List listOfPathImagesAppBarr = [
-    "assets/img/river.jpg",
-    "assets/img/mountain.jpg",
-    "assets/img/beach_palm.jpg",
-    "assets/img/beach.jpg",
-    "assets/img/mountain_stars.jpg",
-    "assets/img/sunset.jpg",
-    "assets/img/frost_mountain.jpg"
+    //"assets/img/river.jpg",
+    "https://i.ibb.co/cc70Pkw/river.jpg",
+    // "assets/img/mountain.jpg",
+    "https://i.ibb.co/drzHxCX/mountain.jpg",
+    // "assets/img/beach_palm.jpg",
+    "https://i.ibb.co/Ksjrbmh/beach-palm.jpg",
+    // "assets/img/beach.jpg",
+    "https://i.ibb.co/nDtRtCQ/beach.jpg",
+    // "assets/img/mountain_stars.jpg",
+    "https://i.ibb.co/1Jw1n5t/mountain-stars.webp",
+    // "assets/img/sunset.jpg",
+    "https://i.ibb.co/PrRCdqQ/sunset.jpg",
+    // "assets/img/frost_mountain.jpg"
+    "https://i.ibb.co/kQTZHfc/frost-mountain.jpg"
   ];
 
   var listOfPlaceReviews = [placeReview1,placeReview2,placeReview3,placeReview4];
@@ -73,7 +80,7 @@ class UiHome extends StatelessWidget {
                       ReviewPlace(listOfPlaceReviews)
                     ]
                 ),
-                CustomAppBar(listOfPathImagesAppBarr),
+                HomeCustomAppBar(listOfPathImagesAppBarr),
               ],
 
 

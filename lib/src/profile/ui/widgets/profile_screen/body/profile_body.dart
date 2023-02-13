@@ -10,11 +10,14 @@ class ProfileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final profileBody = ListView(
-      children:[
-        ProfileImageList(listOfProfileImage)
-      ]
+    final profileBody = Container(
+      margin: EdgeInsets.only(top:285),
+      child: ListView(
+        children:[
+          ProfileImageList(listOfProfileImage)
+        ]
 
+      ),
     );
 
     return profileBody;

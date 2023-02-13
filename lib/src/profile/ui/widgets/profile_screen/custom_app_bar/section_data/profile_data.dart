@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class ProfileData extends StatelessWidget{
 
-  String userName;
-  String email;
+  String? userName;
+  String? email;
 
   ProfileData(this.userName, this.email, {super.key});
 
@@ -26,7 +26,7 @@ class ProfileData extends StatelessWidget{
 
                 child: Center(
                   child:Text(
-                  userName,
+                  userName!,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 30.0,
@@ -49,7 +49,7 @@ class ProfileData extends StatelessWidget{
               child: Center(
 
                 child:Text(
-                  email,
+                  email!,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 16.0,

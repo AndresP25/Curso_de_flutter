@@ -10,23 +10,19 @@ class ProfileImageList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    final emptyContainer = Container(
-
-      height: 285,
-    );
 
     List<Widget> profileImageListConstructor() {
 
       List<Widget> profileImageList = [];
-      profileImageList.add(emptyContainer) ;
+
 
       for (int i = 0; i < listOfProfileImage.length; i++){
         profileImageList.add(
             ProfileImageStack(
-                listOfProfileImage[i]['pathImage'],
-                listOfProfileImage[i]['nameDescription'],
-                listOfProfileImage[i]['description'],
-                listOfProfileImage[i]['steps']
+                namePlace: listOfProfileImage[i].namePlace,//['nameDescription'],
+                description: listOfProfileImage[i].description,//['description'],
+                urlPlaceImage: listOfProfileImage[i].urlPlaceImage,//['pathImage'],
+                likes: listOfProfileImage[i].likes,//['steps']
             )
         );
       }

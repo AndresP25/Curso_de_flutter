@@ -1,18 +1,19 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 class Place{
-  final String pId;
-  final String name;
+  String? pId;
+  final String namePlace;
   final String description;
-  final String urlPlaceImage;
-  final int? likes;
-  final User user;
+  String? urlPlaceImage;
+  int? likes;
+  User? userOwner;
 
-  Place(this.pId, {
-    required this.name,
+  Place({
+    this.pId,
+    required this.namePlace,
     required this.description,
-    required this.urlPlaceImage,
-    this.likes,
-    required this.user
+    this.urlPlaceImage,
+    this.likes = 0,
+    this.userOwner
     });
 }

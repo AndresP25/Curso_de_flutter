@@ -51,13 +51,14 @@ class ProfileSectionData extends StatelessWidget{
 
     if (!snapshot.hasData || snapshot.hasError) {
       print("No logeado");
-
+      profileBloc?.signOut();
       return Row(
         children: [
           ProfileUserPhoto(pathOfProfileImage: pathOfDisconectedProfileImage,
               assetImage: true),
-          ProfileDisconectedData(
-              disconectedData: "Can't connect to profile. Please login.'"),
+          const Expanded( child :
+            ProfileDisconectedData(
+              disconectedData: "Can't connect to profile. Please login.")),
         ],
       );
 
@@ -65,10 +66,13 @@ class ProfileSectionData extends StatelessWidget{
       print("Logeado");
       print(snapshot.data);
 
-      user = User(uId: "1",
+      user = User(
+        uId: null,
         userName: snapshot.data.displayName,
         email: snapshot.data.email,
         userPhotoUrl: snapshot.data.photoURL,
+        userFavoritePlaces: null,
+        userCreatedPlaces: null,
       );
 
       return Row(
