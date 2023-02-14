@@ -47,5 +47,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+    <string>Platzi Trips quiere tomar una foto. ¿Podemos user tú cámara?</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Platzi Trips quiere tomar una foto. ¿Podemos user tú cámara?</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Platzi Trips quiere tomar una foto. ¿Podemos user tú cámara?</string>
 </dict>
 </plist>

@@ -25,24 +25,13 @@ class RowActionButtons extends StatelessWidget{
             const Expanded(child: SavedFavoritePlacesButton()),
 
             Expanded(child: ActionButtonGeneric(
-                onPressed: () async {
-                  await ImagePicker().pickImage(
-                    source:ImageSource.camera
-                  ).then((image) {
-                    if (image == null) {
-                      return;
-                    }
-                    print("Image selected: ${image.path}");
-                    Navigator.push(
+                onPressed: () {
+                  Navigator.push(
                         context,
-
                         MaterialPageRoute(
-                            builder: (BuildContext context) => UiAddPlace(image: image.path)
+                            builder: (BuildContext context) => const UiAddPlace()
                         )
                     );
-                  }).catchError((onError) => print(onError));
-
-
                 },
                 heroTag: "Add new photo",
                 icon: Icons.add_a_photo,

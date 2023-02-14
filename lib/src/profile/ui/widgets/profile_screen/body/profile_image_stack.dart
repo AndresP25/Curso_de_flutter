@@ -35,7 +35,7 @@ class ProfileImageStack extends StatelessWidget{
       children: [
         //ProfileCardImage(urlPlaceImage),
         CardImageGeneric(
-            asset: false,
+            network: true,
             pathImage: urlPlaceImage,
             height: 250,
             width: 380,

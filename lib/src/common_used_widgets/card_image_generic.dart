@@ -6,20 +6,22 @@ import 'package:flutter/material.dart';
 class CardImageGeneric extends StatelessWidget {
 
   CardImageGeneric({
-    required this.asset,
+    required this.network,
     required this.pathImage,
     required this.height,
     required this.width,
+    this.asset,
     this.top,
     this.left,
     this.right,
     this.bottom,
     super.key});
 
-  final bool asset;
+  final bool network;
   final String pathImage;
   final double height;
   final double width;
+  bool? asset;
   double? top;
   double? left;
   double? right;
@@ -47,13 +49,13 @@ class CardImageGeneric extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: asset ?
-                FileImage(File(pathImage) )
-                  :
-                CachedNetworkImageProvider(
-                  pathImage,
-
-                ) as ImageProvider<Object>,
+              image: network ?
+                CachedNetworkImageProvider(pathImage)
+                 :
+                  asset! ?
+                    AssetImage(pathImage) as ImageProvider<Object>
+                      :
+                    FileImage(File(pathImage) )
 
           ),
           borderRadius: const BorderRadius.all(Radius.circular(10)),

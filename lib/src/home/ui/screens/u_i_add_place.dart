@@ -4,9 +4,7 @@ import 'package:platzi_trips_app/src/home/ui/widgets/add_place_screen/custom_app
 
 class UiAddPlace extends StatefulWidget{
 
-  final String image;
-
-  const UiAddPlace({required this.image, super.key});
+  const UiAddPlace({ super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -25,7 +23,7 @@ class _UiAddPlace extends State<UiAddPlace> {
           children:[
 
             const AddPlaceCustomAppBar(),
-            BodyAddPlaceScreen(image: widget.image,),
+            BodyAddPlaceScreen(),
           ]
       )
     );

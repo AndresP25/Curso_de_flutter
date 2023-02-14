@@ -9,9 +9,7 @@ import '../../../../../profile/bloc/profile_bloc.dart';
 
 class BodyAddPlaceScreen extends StatelessWidget{
 
-  final String? image;
-
-  const BodyAddPlaceScreen({required this.image, super.key});
+  const BodyAddPlaceScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class BodyAddPlaceScreen extends StatelessWidget{
       child: ListView(
           children: [
 
-            AddNewPlacePhoto(image: image),
+            AddNewPlacePhoto(),
 
             const SizedBox(height: 10,),
 

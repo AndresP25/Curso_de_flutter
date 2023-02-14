@@ -17,7 +17,7 @@ class CardImage extends StatelessWidget{
       children: [
         //cardImage,
         CardImageGeneric(
-          asset: false,
+          network: true,
           pathImage: pathImage,
           height: 250,
           width: 250,
