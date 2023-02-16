@@ -20,9 +20,9 @@ class _UiAddPlace extends State<UiAddPlace> {
 
     final uiAddPlace = Scaffold(
       body: Stack(
-          children:[
+          children:const [
 
-            const AddPlaceCustomAppBar(),
+            AddPlaceCustomAppBar(),
             BodyAddPlaceScreen(),
           ]
       )

@@ -81,7 +81,9 @@ class _AddNewPlacePhoto extends State<AddNewPlacePhoto> {
             ) ,
             content: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+
               children: [
+
                 PrettyInkWellButton(
                     onPressed: () async => pickImage(context, await ImagePicker().pickImage(source: ImageSource.camera)),
                     textOfFilledButton: 'Camera',
@@ -90,7 +92,9 @@ class _AddNewPlacePhoto extends State<AddNewPlacePhoto> {
                     buttonWithIcon: false,
                     snackbar: false
                 ),
+
                 const SizedBox(width: 20),
+
                 PrettyInkWellButton(
                     onPressed: () async => pickImage(context, await ImagePicker().pickImage(source: ImageSource.gallery)),
                     textOfFilledButton: 'Gallery',

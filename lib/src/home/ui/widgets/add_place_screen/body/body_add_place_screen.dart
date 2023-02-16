@@ -25,7 +25,7 @@ class BodyAddPlaceScreen extends StatelessWidget{
       child: ListView(
           children: [
 
-            AddNewPlacePhoto(),
+            const AddNewPlacePhoto(),
 
             const SizedBox(height: 10,),
 

@@ -17,7 +17,7 @@ class ProfileCustomAppBar extends StatelessWidget {
       children: [
         GradientGeneric(height: 400.0),
         SizedBox(
-          height: 270,
+          height: 290,
 
           child: Column (
             crossAxisAlignment: CrossAxisAlignment.start,
